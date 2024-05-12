@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal web portofolio</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/ab0c693161.js" crossorigin="anonymous"></script>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/Logo vb.png" class="logo">
+        <ul id="sidemenu">
+          <li><a href="#header">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#portofolio">PORTOFOLIO</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+
+      <div class="header-text">
+        <H1>Hi, I am <br><span>Alexandru</span> Florea</H1>
+      </div>
+    </div>
+  </div>
+  <!-------------------------About Me------------------------>
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="./images/BWVJ4580.JPG">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>Hi everyone! My name is - <i><b>as you could see earlier</b></i> - <span
+              class="myFirstName">Alexandru</span> <span class="mySecondName">Florea</span> . I am 26 y.o., from
+            Bucharest - Romania, and right now I work
+            for Romanian Gendarmerie. Since I was a child I felt in love with web development but sometimes Life can
+            lead us on different paths (that's why right now, I am where I am) so, that being said, I think that nothing
+            is accidental. However ... You know ... first love cannot be forgotten, fact which leads us where i am right
+            now, here, doing my personal site, learning everyday, trying to be my best version and doing what I love to
+            do.
+          </p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Web Development</span><br>Both frontend and backend development </li>
+              <li><span>Leadership</span><br>All my life I've made part of a team, most of the time being the leader,
+                even now, at my current job, I coordonate a number of colleagues.</li>
+              <li><span>Communication</span><br>Unbelievable abilities in commnication, not only verbal but as well
+                non-verbal.</li>
+              <li><span>Creativity</span><br>The IT industry is constantly changing as new technology comes out. So, to
+                succeed in this field, you must be creative. I can use my creativity to fix
+                technological issues, develop new processes, or create unique technology.</li>
+              <li><span>Project management</span><br>Even if I am not a project manager, project management skills can
+                help me and my team to succeed in IT..</li>
+              <li><span>Perseverance</span><br>As IT is a technical industry, we may come across new or difficult
+                problems. It's important that we can persevere through these challenges and use them as a learning
+                experience.</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>Web Development</span><br>I have helped some of my friends which are working in this domain, and
+                now, I have finished a course of Web Development organised by IT Factory. </li>
+              <li><span>Leadership</span><br>I was the captain of a Basketball Team as well being a coordionator. In
+                Gendarmerie I have to lead a team too where every mistakes can lead to a big problem.</li>
+              <li><span>Communication</span><br>I've finished English-German in University, where I had to talk a lot,
+                in many situations, everytime different than the last time.</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>It factory - Wev development</span><br>2023-2024</li>
+              <li><span>University of Pitesti, English-German </span><br>2015-2018</li>
+              <li><span>Economic College "Maria Teiuleanu" Pitesti - technician in economic
+                  activities</span><br>2011-2015</li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Photos about me -->
+
+  <div class="bodyContainer">
+    <div class="containerImg">
+      <div class="containerImgSet">
+        <span class="" style="--i:1"><img src="/images/IMG_2869.JPG" alt=""></span>
+        <span style="--i:1"><img src="/images/1.JPG" alt=""></span>
+        <span style="--i:2"><img src="/images/2.JPG" alt=""></span>
+        <span style="--i:3"><img src="/images/3.JPG" alt=""></span>
+        <span style="--i:4"><img src="/images/4.JPG" alt=""></span>
+        <span style="--i:5"><img src="/images/5.jpeg" alt=""></span>
+        <span style="--i:6"><img src="/images/6.jpeg" alt=""></span>
+        <span style="--i:7"><img src="/images/7.jpeg" alt=""></span>
+        <span style="--i:8"><img src="/images/8.JPG" alt=""></span>
+        <span style="--i:9"><img src="/images/9.JPG" alt=""></span>
+        <span style="--i:10"><img src="/images/10.JPG" alt=""></span>
+      </div>
+    </div>
+  </div>
+
+  <!----------------------services--------------------->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fas fa-code"></i>
+          <h2>Web Design</h2>
+          <p>Involves creating the visual elements and layout of a website, while coding involves translating these
+            designs into a functional website using programming languages like HTML, CSS, and JavaScript. Typically,
+            dedicated web developers translate the designs to code.</p>
+          <a href="#">Learn more</a>
+        </div>
+        <div>
+          <i class="fas fa-crop-alt"></i>
+          <h2>Graphic Design</h2>
+          <p>Is a craft where professionals create visual content to communicate messages. By applying visual hierarchy
+            and page layout techniques, designers use typography and pictures to meet users' specific needs and focus on
+            the logic of displaying elements in interactive designs to optimize the user experience.</p>
+          <a href="#">Learn more</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-code-merge"></i>
+          <h2>Back-end Development</h2>
+          <p>Back-end development means working on server-side software, which focuses on everything you can't see on a
+            website. Back-end developers ensure the website performs correctly, focusing on databases, back-end logic,
+            application programming interface (APIs), architecture, and servers.</p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!------------------------ portofolio ------------------------------->
+  <div id="portofolio">
+    <div class="container">
+
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="/images/TattooProj.jpeg" alt="">
+          <div class="layer">
+            <h3>First Project</h3>
+            <p>This is a project made for my sister and yes ... she is a Tattoo Artist! <br> You can find it on my
+              Github page only by clicking on this icon.</p>
+            <a href="https://github.com/daVinciXV/TattooSiteProject"><i class="fa-solid fa-file"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="/images/Quizgame3.png" alt="quizGame">
+          <div class="layer">
+            <h3>First Quiz Game</h3>
+            <p>It was my first challenge, a quiz game. Not perfect but still good for me. Hope you are going to like it!
+            </p>
+            <a href="https://github.com/daVinciXV/QuizzGame"><i class="fa-regular fa-file"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="/images/Weather.png" alt="">
+          <div class="layer">
+            <h3>First Project</h3>
+            <p>This is a weather project. A pretty nice one, watch out to let the app check your location!!</p>
+            <a href="https://davincixv.github.io/WeatherProject/"><i class="fa-regular fa-file-lines"></i></a>
+          </div>
+        </div>
+      </div>
+      <a href="https://github.com/daVinciXV?tab=repositories" class="btn">See more</a>
+    </div>
+  </div>
+  <!------------------------- contact------------------------>
+
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i>iliealexandruflorea@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i>+40 745.544.345</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/al.xe.and.ur/"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.linkedin.com/feed/?trk=homepage-basic_sign-in-submit"><i
+                class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61558075206860"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/alexandruIFl"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+          <a href="images/CV - Ilie Alexandru Florea.pdf" download class="btn btn2">Download Cv</a>
+        </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" autocomplete="off" required>
+            <input type="email" name="Email" placeholder="Your Email" autocomplete="off" required>
+            <textarea name="Message" rows="8" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------button to top-------------------------------------------->
+    <button id="go-to-top-button" class="btn1 hidden"><i class="fa-solid fa-arrow-up"></i></button>
+    <div class="copyright">
+      <p>Copyright © Alexandru. Made with <i class="fa-solid fa-heart"></i> by Vinci</p>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="index.js"> </script>
+
+
+
+</body>
+
+</html>
