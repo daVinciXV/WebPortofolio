@@ -1,31 +1,77 @@
 
 
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
+let tablinks = document.getElementsByClassName("tab-links");
+let tabcontents = document.getElementsByClassName("tab-contents");
 
-function opentab(tabname) {
-  for (tablink of tablinks) {
+//-----------------------------------------------deschidere și închidere meniu---------------------------------------------------------
+
+let closebtn = document.getElementById("close-menu-btn");
+let openbtn = document.getElementById("open-menu-btn");
+closebtn.addEventListener("click", closemenu);
+openbtn.addEventListener("click", openmenu);
+
+
+//---------------------------------------------- afișare skilluri, experiență și educație---------------------------------------------
+
+let skillTabsActive = document.getElementById("skills-tab");
+
+skillTabsActive.addEventListener("click", ev => opentab(ev, 'skills'));
+
+function opentab(ev, tabname) {
+  for (const tablink of tablinks) {
     tablink.classList.remove("active-link")
   }
-  for (tabcontent of tabcontents) {
+  for (const tabcontent of tabcontents) {
     tabcontent.classList.remove("active-tab")
   }
-  event.currentTarget.classList.add("active-link");
+  ev.target.classList.add("active-link");
   document.getElementById(tabname).classList.add("active-tab");
 }
 
-var sidemenu = document.getElementById("sidemenu");
+let skillTabsActiveEx = document.getElementById("skills-tab-ex");
+
+skillTabsActiveEx.addEventListener("click", ev => opentab(ev, 'experience'));
+
+function opentab(ev, tabname) {
+  for (const tablink of tablinks) {
+    tablink.classList.remove("active-link")
+  }
+  for (const tabcontent of tabcontents) {
+    tabcontent.classList.remove("active-tab")
+  }
+  ev.target.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
+}
+
+let skillTabsActiveEd = document.getElementById("skills-tab-ed");
+
+skillTabsActiveEd.addEventListener("click", ev => opentab(ev, 'education'));
+
+function opentab(ev, tabname) {
+  for (const tablink of tablinks) {
+    tablink.classList.remove("active-link")
+  }
+  for (const tabcontent of tabcontents) {
+    tabcontent.classList.remove("active-tab")
+  }
+  ev.target.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
+}
+
+
+//--------------------------------------------------------sidemenu open/close----------------------------------
+
+let sidemenu = document.getElementById("sidemenu");
 
 function openmenu() {
   sidemenu.style.right = "0";
 }
-
 function closemenu() {
   sidemenu.style.right = "-200px";
 }
 
 
-// ------------------Active form via Google Sheets-------------------------------
+// --------------------------------------------------Active form via Google Sheets-------------------------------
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxO0JcXH_jOeWPS9IixKQNAtLl_fm6iDfVR7Yw0_BlDJ6TC8cZh-KKO5j9860G6Sjz3/exec';
 const form = document.forms['submit-to-google-sheet']
@@ -48,7 +94,7 @@ form.addEventListener('submit', e => {
 
 // ------------------Back to Top Btn-------------------------
 
-var goToTopBtn = document.getElementById("go-to-top-button");
+let goToTopBtn = document.getElementById("go-to-top-button");
 console.log(goToTopBtn);
 window.onscroll = () => {
   scrollFunction();

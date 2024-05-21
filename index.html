@@ -20,9 +20,9 @@
           <li><a href="#services">SERVICES</a></li>
           <li><a href="#portofolio">PORTOFOLIO</a></li>
           <li><a href="#contact">CONTACT</a></li>
-          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          <i class="fa-solid fa-xmark" id="close-menu-btn"></i>
         </ul>
-        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        <i class="fa-solid fa-bars" id="open-menu-btn"></i>
       </nav>
 
       <div class="header-text">
@@ -49,9 +49,9 @@
             do.
           </p>
           <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-            <p class="tab-links" onclick="opentab('education')">Education</p>
+            <p id="skills-tab" class="tab-links active-link">Skills</p>
+            <p id="skills-tab-ex" class="tab-links">Experience</p>
+            <p id="skills-tab-ed" class="tab-links">Education</p>
           </div>
           <div class="tab-contents active-tab" id="skills">
             <ul>
@@ -99,8 +99,7 @@
   <div class="bodyContainer">
     <div class="containerImg">
       <div class="containerImgSet">
-        <span class="" style="--i:1"><img src="/images/IMG_2869.JPG" alt=""></span>
-        <span style="--i:1"><img src="/images/1.JPG" alt=""></span>
+        <span class="" style="--i:1"><img src="/images/7.jpeg" alt=""></span>
         <span style="--i:2"><img src="/images/2.JPG" alt=""></span>
         <span style="--i:3"><img src="/images/3.JPG" alt=""></span>
         <span style="--i:4"><img src="/images/4.JPG" alt=""></span>
