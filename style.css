@@ -679,3 +679,19 @@ nav .fa-solid {
   margin-top: -12px;
   display: block;
 }
+
+#spinner-overlay {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 5px solid #ddd;
+  border-top-color: #ff004f;
+  display: none;
+  animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}

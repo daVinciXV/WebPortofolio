@@ -77,15 +77,26 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbxO0JcXH_jOeWPS9IixKQ
 const form = document.forms['submit-to-google-sheet']
 const msg = document.getElementById("msg")
 
+
+function showSpinner() {
+  document.getElementById("spinner-overlay").style.display = "block";
+}
+
+function hideSpinner() {
+  document.getElementById("spinner-overlay").style.display = "none";
+}
+
 form.addEventListener('submit', e => {
   e.preventDefault()
+  showSpinner();
   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
     .then(response => {
-      msg.innerHTML = "Message sent successfully"
+      msg.innerHTML = "Message sent successfully!"
       setTimeout(function () {
         msg.innerHTML = ""
       }, 2000)
       form.reset()
+      hideSpinner();
     })
     .catch(error => console.error('Error!', error.message))
 })
@@ -95,11 +106,9 @@ form.addEventListener('submit', e => {
 // ------------------Back to Top Btn-------------------------
 
 let goToTopBtn = document.getElementById("go-to-top-button");
-console.log(goToTopBtn);
 window.onscroll = () => {
   scrollFunction();
 };
-console.log(window);
 function scrollFunction() {
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     goToTopBtn.style.display = "block";
