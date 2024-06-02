@@ -362,7 +362,7 @@ nav ul li a:hover::after {
 }
 
 .btn.btn2 {
-  display: inline-block;
+  display: flex;
   background: #ff004f;
 }
 
@@ -681,6 +681,7 @@ nav .fa-solid {
 }
 
 #spinner-overlay {
+  margin-left: 10px;
   width: 30px;
   height: 30px;
   border-radius: 50%;

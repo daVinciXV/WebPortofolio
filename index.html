@@ -205,10 +205,12 @@
             <input type="text" name="Name" placeholder="Your Name" autocomplete="off" required>
             <input type="email" name="Email" placeholder="Your Email" autocomplete="off" required>
             <textarea name="Message" rows="8" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn btn2">Submit</button>
-            <div id="spinner-overlay" class="overlay">
-              <div class="loading-spinner"></div>
-            </div>
+            <button type="submit" class="btn btn2">
+              <span id="spanText">Submit</span>
+              <div id="spinner-overlay" class="overlay">
+                <div class="loading-spinner"></div>
+              </div>
+            </button>
           </form>
           <span id="msg"></span>
         </div>
